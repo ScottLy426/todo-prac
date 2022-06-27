@@ -6,7 +6,6 @@ import {
 } from '@chakra-ui/react';
 import EditableControls from './EditableControls';
 export default function TodoItem({ item }) {
-
   return (
     <Editable
       textAlign='center'
@@ -17,7 +16,7 @@ export default function TodoItem({ item }) {
     >
       <EditablePreview textDecoration={item.isComplete && "line-through"} />
       <Input as={EditableInput} />
-      <EditableControls />
+      <EditableControls item={item} />
     </Editable>
   )
 }
